@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Keeping Fit 是面向 iPhone 与 Apple Watch 的综合健身记录、动作识别、训练计划与设备端 AI 教练。">
+  <meta name="theme-color" content="#f7faf7">
+  <meta property="og:title" content="Keeping Fit · 每一次训练，都算数">
+  <meta property="og:description" content="Apple Watch 自动识别动作，iPhone 深度复盘，训练计划与设备端 AI。">
+  <meta property="og:image" content="assets/app-icon.png">
+  <meta property="og:type" content="website">
+  <title>Keeping Fit · Apple Watch 健身记录与设备端 AI</title>
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css?v=20261012-1">
+  <script src="script.js?v=20261012-1" defer></script>
+</head>
+<body class="landing-page">
+  <canvas class="energy-canvas" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Keeping Fit 首页">
+      <img src="assets/app-icon.png" alt="" width="42" height="42">
+      <span>Keeping Fit</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="#features">功能</a>
+      <a href="#watch">Apple Watch</a>
+      <a href="#ai">设备端 AI</a>
+      <a href="#privacy">隐私</a>
+      <a href="support.html">支持</a>
+    </nav>
+    <a class="nav-action" href="#download">即将上线</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="打开导航菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-navigation" hidden>
+      <nav aria-label="移动端主导航">
+        <a href="#features">功能</a>
+        <a href="#watch">Apple Watch</a>
+        <a href="#ai">设备端 AI</a>
+        <a href="support.html">技术支持</a>
+        <a href="privacy.html">隐私政策</a>
+      </nav>
+      <a class="mobile-nav-action" href="#download">查看上线信息</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="availability reveal">
+          <span aria-hidden="true"></span>
+          为 iPhone 与 Apple Watch 打造
+        </div>
+        <p class="kicker reveal">TRAIN · UNDERSTAND · PROGRESS</p>
+        <h1 class="reveal"><span class="headline-line">每一次训练，</span><br><em>都算数。</em></h1>
+        <p class="hero-lead reveal">
+          从腕上自动识别动作，到手机端复盘容量、心率与进步趋势。
+          Keeping Fit 把记录、计划和设备端 AI 汇聚成一套专注、清晰、私密的训练体验。
+        </p>
+        <div class="hero-actions reveal">
+          <a class="primary-button" href="#features">
+            探索核心功能
+            <span aria-hidden="true">↘</span>
+          </a>
+          <a class="text-link" href="support.html">技术支持 <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="compatibility reveal">力量 · 有氧 · 功能性 · 柔韧训练 · 支持中文与 English</p>
+      </div>
+
+      <div class="hero-product reveal" aria-label="Keeping Fit 产品界面示意">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+
+        <div class="phone-device hero-phone" aria-hidden="true">
+          <div class="phone-frame">
+            <div class="dynamic-island"></div>
+            <div class="phone-screen dashboard-screen">
+              <div class="screen-status"><span>9:41</span><span>● ● ▰</span></div>
+              <div class="screen-heading">
+                <div><small>星期一 · 10月12日</small><strong>继续变强，Kampui</strong></div>
+                <div class="avatar">K</div>
+              </div>
+              <div class="week-card">
+                <div class="progress-ring"><span>4<small>/5</small></span></div>
+                <div><small>本周目标</small><strong>还差一次训练</strong><p>连续训练 6 周</p></div>
+              </div>
+              <div class="mini-grid">
+                <div><span class="green-dot"></span><small>训练容量</small><strong>12.8t</strong><i>+18%</i></div>
+                <div><span class="blue-dot"></span><small>本周时长</small><strong>4h 26m</strong><i>+42m</i></div>
+              </div>
+              <div class="screen-section-title"><strong>最近训练</strong><span>查看全部</span></div>
+              <div class="workout-row">
+                <div class="workout-symbol">⌁</div>
+                <div><strong>上肢力量</strong><small>今天 · 48 分钟</small></div>
+                <div class="workout-value"><strong>16</strong><small>组</small></div>
+              </div>
+              <div class="chart-card">
+                <div><small>训练趋势</small><strong>稳步提升</strong></div>
+                <svg viewBox="0 0 220 70" role="presentation">
+                  <defs><linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d98c" stop-opacity=".35"/><stop offset="1" stop-color="#34d98c" stop-opacity="0"/></linearGradient></defs>
+                  <path class="chart-area" d="M0 61 C18 57 30 43 49 48 S80 56 95 34 S124 13 142 28 S171 45 184 23 S205 8 220 12 L220 70 L0 70Z"/>
+                  <path class="chart-line" d="M0 61 C18 57 30 43 49 48 S80 56 95 34 S124 13 142 28 S171 45 184 23 S205 8 220 12"/>
+                </svg>
+              </div>
+              <div class="tab-bar"><span class="active">⌂<small>首页</small></span><span>⌁<small>训练</small></span><span>□<small>计划</small></span><span>✦<small>教练</small></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="watch-device hero-watch" aria-hidden="true">
+          <span class="watch-crown"></span>
+          <div class="watch-screen">
+            <div class="watch-label"><span class="live-dot"></span> 训练中</div>
+            <strong class="watch-time">32:18</strong>
+            <div class="watch-exercise">哑铃弯举</div>
+            <div class="rep-number">12</div>
+            <small class="rep-label">本组次数</small>
+            <div class="watch-metrics"><span><b>128</b> BPM</span><span><b>8</b> 组</span></div>
+          </div>
+        </div>
+
+        <div class="floating-card floating-volume" aria-hidden="true">
+          <span>本月容量</span><strong>48.6 <small>t</small></strong>
+          <i>↑ 12%</i>
+        </div>
+        <div class="floating-card floating-detect" aria-hidden="true">
+          <span class="detect-icon">✦</span>
+          <div><strong>动作已识别</strong><small>哑铃弯举 · 96%</small></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#intro" aria-label="向下探索"><span>SCROLL</span><i></i></a>
+    </section>
+
+    <section id="intro" class="intro section-shell">
+      <p class="section-label reveal">ONE COMPLETE TRAINING SYSTEM</p>
+      <h2 class="display-heading reveal">不只记下一次训练。<br><em>看见长期的改变。</em></h2>
+      <p class="section-intro reveal">
+        腕上开始，手机复盘。Keeping Fit 将训练动作、组次、容量、心率、计划和反馈连接在一起。
+      </p>
+      <div class="metric-row reveal">
+        <div><strong data-counter="70">70</strong><span>覆盖动作</span></div>
+        <div><strong data-counter="4">4</strong><span>训练大类</span></div>
+        <div><strong data-counter="2">2</strong><span>设备协同</span></div>
+        <div><strong>100<small>%</small></strong><span>本机优先</span></div>
+      </div>
+    </section>
+
+    <section id="features" class="features section-shell">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-label">BUILT FOR REAL TRAINING</p>
+          <h2>从第一组，<br>到下一次突破。</h2>
+        </div>
+        <p>每个环节都围绕实际训练设计：开始要快、记录要准、复盘要清楚、下一步要可执行。</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-large reveal">
+          <div class="feature-copy">
+            <span class="feature-index">01 / 腕上训练</span>
+            <h3>抬腕开始，动作自动识别。</h3>
+            <p>Apple Watch 结合 Core ML、运动传感器与个人反馈，识别训练动作并自动计次。</p>
+            <ul><li>实时动作与次数</li><li>心率和活动圆环</li><li>暂停、结束与组间录入</li></ul>
+          </div>
+          <div class="card-watch" aria-hidden="true">
+            <span class="watch-crown"></span>
+            <div class="watch-screen">
+              <div class="watch-label"><span class="live-dot"></span> 自动识别</div>
+              <div class="scan-lines"></div>
+              <div class="exercise-glyph">H</div>
+              <strong>侧平举</strong>
+              <div class="confidence"><i style="width: 94%"></i></div>
+              <small>置信度 94%</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-card reveal">
+          <span class="feature-index">02 / 全品类记录</span>
+          <h3>不只力量训练。</h3>
+          <p>统一记录力量、有氧、功能性与柔韧训练，让不同形式的运动进入同一套趋势视图。</p>
+          <div class="category-list" aria-hidden="true">
+            <span><i class="strength"></i>力量</span>
+            <span><i class="cardio"></i>有氧</span>
+            <span><i class="functional"></i>功能性</span>
+            <span><i class="flexibility"></i>柔韧</span>
+          </div>
+        </article>
+
+        <article class="feature-card reveal">
+          <span class="feature-index">03 / 数据复盘</span>
+          <h3>数字变成训练信息。</h3>
+          <p>从容量趋势、肌群频次到个人最佳，快速理解近期状态，而不是在数据里迷路。</p>
+          <div class="bars" aria-hidden="true">
+            <i style="height: 28%"></i><i style="height: 46%"></i><i style="height: 40%"></i>
+            <i style="height: 68%"></i><i style="height: 62%"></i><i style="height: 82%"></i><i style="height: 94%"></i>
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-wide reveal">
+          <div class="feature-copy">
+            <span class="feature-index">04 / 训练计划</span>
+            <h3>今天练什么，始终清楚。</h3>
+            <p>使用推拉腿、上下肢、全身等内置模板，或由设备端 AI 根据目标准备结构化训练计划。</p>
+          </div>
+          <div class="plan-preview" aria-hidden="true">
+            <div class="plan-header"><span>本周计划</span><strong>3 / 4</strong></div>
+            <div class="plan-days">
+              <span class="done">一<small>✓</small></span><span>二<small>休</small></span>
+              <span class="done">三<small>✓</small></span><span>四<small>休</small></span>
+              <span class="done">五<small>✓</small></span><span class="today">六<small>练</small></span>
+              <span>日<small>休</small></span>
+            </div>
+            <div class="next-session"><span>下一次</span><strong>下肢力量 · 6 个动作</strong><i>开始 →</i></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="watch" class="watch-section">
+      <div class="section-shell watch-layout">
+        <div class="watch-showcase reveal" aria-hidden="true">
+          <div class="watch-glow"></div>
+          <div class="watch-device watch-device-large">
+            <span class="watch-crown"></span>
+            <div class="watch-screen">
+              <div class="watch-label"><span class="live-dot"></span> 进行中</div>
+              <strong class="watch-time">42:06</strong>
+              <div class="activity-rings">
+                <i class="ring-one"></i><i class="ring-two"></i><i class="ring-three"></i>
+                <span>326<small>KCAL</small></span>
+              </div>
+              <div class="watch-metrics"><span><b>136</b> BPM</span><span><b>18</b> 组</span></div>
+            </div>
+          </div>
+          <span class="sensor-chip chip-one">加速度</span>
+          <span class="sensor-chip chip-two">旋转</span>
+          <span class="sensor-chip chip-three">心率</span>
+        </div>
+        <div class="watch-copy">
+          <p class="section-label reveal">APPLE WATCH FIRST</p>
+          <h2 class="reveal">训练时，<br><em>手机可以留在一边。</em></h2>
+          <p class="reveal">手表独立启动和完成训练，熄屏常亮显示关键指标；训练结束后自动传回 iPhone。</p>
+          <div class="check-list">
+            <div class="reveal"><span>01</span><div><strong>智能识别</strong><p>三路融合识别训练动作，并从你的修正中持续学习。</p></div></div>
+            <div class="reveal"><span>02</span><div><strong>实时镜像</strong><p>iPhone 自动显示当前动作、标准度和实时训练数据。</p></div></div>
+            <div class="reveal"><span>03</span><div><strong>可靠回传</strong><p>训练完成即同步，临时离线也不会丢失记录。</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai" class="ai-section section-shell">
+      <div class="ai-panel">
+        <div class="ai-copy">
+          <p class="section-label reveal">ON-DEVICE INTELLIGENCE</p>
+          <h2 class="reveal">AI 教练在设备上，<br><em>数据留在你手里。</em></h2>
+          <p class="reveal">
+            使用兼容设备上的 Apple Foundation Models，或按需下载本地 GGUF 模型。
+            结合你主动选择的训练记录，生成复盘、回答问题并准备下一份计划。
+          </p>
+          <div class="ai-pills reveal"><span>训练复盘</span><span>计划生成</span><span>动作问答</span><span>本地模型</span></div>
+          <p class="ai-note reveal">重要写入操作需要你的明确确认。</p>
+        </div>
+        <div class="coach-window reveal" aria-label="AI 教练对话示意">
+          <div class="coach-header"><span class="spark">✦</span><div><strong>AI 教练</strong><small>设备端处理</small></div><i></i></div>
+          <div class="chat user-chat">帮我复盘今天的上肢训练。</div>
+          <div class="chat coach-chat">
+            <span class="spark">✦</span>
+            <p>今天完成了 16 组，总容量比上次提高 8%。推类动作进步明显，但最后两组卧推速度下降。</p>
+          </div>
+          <div class="insight-row"><span><small>建议</small><strong>下次卧推主组减 2.5 kg</strong></span><button type="button">加入计划</button></div>
+          <div class="coach-input"><span>继续问教练…</span><i>↑</i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="privacy-section section-shell">
+      <div class="privacy-card reveal">
+        <div class="privacy-symbol" aria-hidden="true">⌾</div>
+        <div>
+          <p class="section-label">PRIVACY BY DEFAULT</p>
+          <h2>你的健康数据，<br>不是广告素材。</h2>
+        </div>
+        <div class="privacy-copy">
+          <p>不进行跨 App 跟踪，不出售个人数据，不用健康数据投放广告。档案、训练与 AI 内容默认保存在你的设备和 Apple Health 中。</p>
+          <a href="privacy.html">阅读完整隐私政策 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download-section section-shell">
+      <div class="download-icon reveal"><img src="assets/app-icon.png" alt="" width="112" height="112"></div>
+      <p class="section-label reveal">COMING SOON</p>
+      <h2 class="reveal">准备好认真对待<br><em>下一次训练。</em></h2>
+      <p class="reveal">Keeping Fit 正在为 iPhone 与 Apple Watch 准备上线。</p>
+      <a class="primary-button disabled reveal" href="support.html" aria-label="Keeping Fit 上线信息">
+        查看支持与上线信息
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="assets/app-icon.png" alt="" width="44" height="44">
+        <div><strong>Keeping Fit</strong><span>Train. Understand. Progress.</span></div>
+      </div>
+      <div class="footer-links">
+        <div><strong>产品</strong><a href="#features">核心功能</a><a href="#watch">Apple Watch</a><a href="#ai">设备端 AI</a></div>
+        <div><strong>帮助</strong><a href="support.html">技术支持</a><a href="privacy.html">隐私政策</a><a href="mailto:kampui4app@163.com">联系我们</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-current-year>2026</span> Keeping Fit.</span><span>Designed for every rep.</span></div>
+  </footer>
+</body>
+</html>

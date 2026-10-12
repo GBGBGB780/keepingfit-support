@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Keeping Fit App 隐私政策。">
+  <meta name="theme-color" content="#f7faf7">
+  <title>Keeping Fit · 隐私政策</title>
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css?v=20261012-1">
+  <script src="script.js?v=20261012-1" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Keeping Fit 首页">
+      <img src="assets/app-icon.png" alt="" width="42" height="42"><span>Keeping Fit</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="index.html">首页 / Home</a>
+      <a href="support.html">支持 / Support</a>
+      <a class="active" href="privacy.html">隐私 / Privacy</a>
+    </nav>
+    <a class="nav-action" href="mailto:kampui4app@163.com">隐私咨询</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="打开导航菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-navigation" hidden>
+      <nav><a href="index.html">首页 / Home</a><a href="support.html">支持 / Support</a><a class="active" href="privacy.html">隐私 / Privacy</a></nav>
+    </div>
+  </header>
+
+  <main class="document policy">
+    <div class="document-title">
+      <p class="section-label">PRIVACY POLICY</p>
+      <h1>Keeping Fit 隐私政策</h1>
+      <p>生效日期 / Effective date: 2026-10-12</p>
+      <p class="policy-lead">Keeping Fit 以本机处理为默认原则，不出售个人数据，不进行跨 App 跟踪，也不将健康数据用于广告。</p>
+      <p class="english policy-lead">Keeping Fit is on-device first. It does not sell personal data, track you across apps, or use health data for advertising.</p>
+    </div>
+
+    <section>
+      <h2><span>01</span>我们处理的数据 / Data We Process</h2>
+      <h3>健康与健身 / Health and Fitness</h3>
+      <p>经你授权后，App 可读取训练、心率、活动能量、步数及相关健身数据，并可将你主动记录的训练写入 Apple Health。这些数据用于训练记录、统计、趋势、计划和你主动请求的分析。</p>
+      <p class="english">With permission, the App may read workouts, heart rate, active energy, steps, and related fitness data, and write workouts you choose to record to Apple Health.</p>
+
+      <h3>动作数据 / Motion Data</h3>
+      <p>Apple Watch 使用加速度、旋转和重力数据识别动作、计次及评估动作一致性。识别反馈和派生特征可保存在本地，用于改善当前设备上的个性化识别。</p>
+      <p class="english">Apple Watch uses accelerometer, rotation, and gravity data for exercise recognition, repetition counting, and movement consistency. Derived features and feedback may remain locally for personalization.</p>
+
+      <h3>档案与内容 / Profile and Content</h3>
+      <p>用户名、头像、身高、体重、年龄、性别、目标、训练计划、训练修正、备份及 AI 对话用于提供你选择的功能。该档案是设备本地档案，不是云端互联网账号。</p>
+
+      <h3>位置 / Location</h3>
+      <p>获得许可后，App 可在实时训练开始附近获取一次位置，用于显示训练发生地点。Keeping Fit 不会因此持续记录运动路线。对于从 Apple Health 导入且本身包含路线的训练，App 可在你授权后读取该路线。</p>
+    </section>
+
+    <section>
+      <h2><span>02</span>存储与设备间传输 / Storage and Device Transfer</h2>
+      <ul>
+        <li>训练记录可保存在 Apple Health，以及 App 的本地数据库中。</li>
+        <li>App 本地数据库未启用 CloudKit 云同步。</li>
+        <li>iPhone 与配对的 Apple Watch 通过 Apple WatchConnectivity 传输设置、计划、实时状态与训练结果。</li>
+        <li>本地档案使用 AES-GCM 加密，密钥保存在设备 Keychain 中。</li>
+        <li>你可主动导出完整 JSON 备份，并明确选择文件进行恢复。</li>
+        <li>同一开发者、持有相应授权的 App 可通过共享 App Group 与 Keychain 访问加密档案和兼容的本地模型。</li>
+      </ul>
+      <p class="english">Workout data may be stored in Apple Health and the App’s local database. CloudKit sync is disabled. Paired devices transfer data through WatchConnectivity. Local profiles are encrypted with AES-GCM using a Keychain-protected key.</p>
+    </section>
+
+    <section>
+      <h2><span>03</span>AI、网络与第三方服务 / AI, Network and Third Parties</h2>
+      <p>兼容设备可使用 Apple 提供的设备端 Foundation Models。你也可以主动下载兼容的本地 GGUF 模型；下载时 App 会连接模型托管方，例如 Hugging Face。托管方可能依据其政策收到完成请求所需的信息，例如 IP 地址。</p>
+      <p>地点名称转换可能使用 Apple 提供的系统地理编码服务。Apple Health、Keychain、WatchConnectivity 与相关系统能力受 Apple 的条款和隐私政策约束。</p>
+      <p>App 不使用广告 SDK，不出售个人数据，不进行跨 App 跟踪，也不使用健康数据进行广告投放。</p>
+      <p class="english">On compatible devices, the App may use Apple’s on-device Foundation Models. Optional local GGUF downloads connect to a selected model host, such as Hugging Face. The App has no advertising SDK, does not sell personal data, and does not use health data for advertising.</p>
+    </section>
+
+    <section>
+      <h2><span>04</span>保留与删除 / Retention and Deletion</h2>
+      <p>本地数据会保留到你删除单条记录、删除本地档案或卸载 App。删除本地档案会移除该档案的本地资料、训练缓存、计划、AI 内容、识别反馈与成就进度。</p>
+      <p>已经写入 Apple Health 的训练不会随本地档案自动删除；如需删除，请在 Apple Health 或 App 提供的明确删除流程中处理。已导出的备份文件由你自行管理。</p>
+      <p class="english">Local data remains until you delete an item or profile, or uninstall the App. Workouts already saved to Apple Health are not automatically removed when a local profile is deleted.</p>
+    </section>
+
+    <section>
+      <h2><span>05</span>你的选择与控制 / Your Choices and Controls</h2>
+      <ul>
+        <li>你可在系统设置中撤回健康、动作、定位、相机或照片权限。</li>
+        <li>你可修正动作识别结果、删除识别反馈或停止使用自动识别。</li>
+        <li>你可删除训练、本地 AI 模型、AI 对话或整个本地档案。</li>
+        <li>你可选择是否下载本地模型，并管理模型占用的存储空间。</li>
+        <li>你可导出个人备份，并在恢复前查看校验结果。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span>06</span>健康与安全说明 / Health and Safety Notice</h2>
+      <p>Keeping Fit 是训练记录和一般健身辅助工具，不是医疗设备、诊断或治疗服务。动作识别、统计和 AI 输出可能不准确，不能替代医生、物理治疗师、合格教练或紧急服务。出现疼痛、头晕或其他不适时，请停止训练并寻求专业帮助。</p>
+      <p class="english">Keeping Fit is a workout-recording and general fitness tool, not a medical device, diagnosis, or treatment service. Its recognition, statistics, and AI output may be inaccurate and do not replace qualified professionals.</p>
+    </section>
+
+    <section>
+      <h2><span>07</span>政策更新 / Policy Updates</h2>
+      <p>如果未来启用涉及个人数据的新网络或云端功能，App 将在启用前提供额外说明，并在需要时征得同意。重大变化会反映在本页面或 App 内说明中。</p>
+    </section>
+
+    <section class="contact-card policy-contact">
+      <div><p class="section-label">CONTACT</p><h2>隐私与数据问题</h2><p>For privacy, data deletion, or permission questions, contact us.</p></div>
+      <a class="primary-button" href="mailto:kampui4app@163.com">kampui4app@163.com <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="document-footer">
+    <div class="footer-brand"><img src="assets/app-icon.png" alt="" width="44" height="44"><div><strong>Keeping Fit</strong><span>Train. Understand. Progress.</span></div></div>
+    <div class="footer-bottom"><span>© <span data-current-year>2026</span> Keeping Fit.</span><span><a href="index.html">首页</a> · <a href="support.html">技术支持</a></span></div>
+  </footer>
+</body>
+</html>
